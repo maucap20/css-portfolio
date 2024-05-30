@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+header {
+    background: #18246b;
+    color: #fff;
+    padding: 1% 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 5%;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 2%;
+    display: flex;
+    align-items: flex-start;
+}
+
+section p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 1%;
+}
+
+/* stack overflow says em is used in relation to base font-size so I hope i used it right */
+section h1, section h2 {
+    text-orientation: mixed;
+    margin: 0 7% 0 20%;
+    font-size: 2em;
+    white-space: nowrap;
+}
+
+#about img {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+
+.applications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+
+.application {
+    flex: 1 1;
+    box-sizing: border-box;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: calc(50% - 1em);
+    min-width: 30%;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card p {
+    padding: 1em;
+    text-align: center;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.card:hover img {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    .application {
+        flex: 1 1 calc(50% - 1em);
+    }
+
+    section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    section h1, section h2 {
+        writing-mode: horizontal-tb;
+        text-orientation: initial;
+        margin: 0 0 1em 0;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .application {
+        flex: 1 1 100%;
+    }
+
+    section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    section h1, section h2 {
+        text-orientation: initial;
+        margin: 0 0 1em 0;
+        white-space: normal;
+    }
+}

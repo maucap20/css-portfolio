@@ -1,1 +1,3 @@
 # css-portfolio
+
+This application is designed as a personal portfolio to complete Challenge 2. I was unable to get the first card to be the one that was the largest, however feel confident in the page's ability to adapt to screen size. A good portion of the css styling, specifically for the cards and the dynamic animations, was created with the help of some stack overflow digging as well as previous projects I have worked on at school.
